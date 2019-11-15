@@ -1,0 +1,53 @@
+class Book{
+	private String author;
+	private int pages;
+	private String title;
+	
+	public Book(){
+		this("", 100, "");
+		
+	}
+public int getPages(){
+	return pages;
+}
+public void setPages(int pages){
+	this.pages=pages;
+	
+}
+public String getAuthor(){
+	return author;
+}
+public void setAuthor(String author){
+	this.author=author;
+	
+}
+public String getTitle(){
+	return title;
+}
+public void setTitle(String title){
+	this.title=title;
+	
+}
+public String toString(){
+	return"Title: "+title + "author" + author + "pages"+ pages;
+
+}
+	public Book(String author, int pages, String title){
+		this.author= author;
+		this.pages=pages;
+		this.title=title;
+		System.out.println("This book title is "+ title +"it has "+pages+"pages"+ "And author is "+ author);
+	}
+
+public class ConstructorExample {
+
+	
+	public static void main(String[] args) {
+		Book book1= new Book("Opera");
+		
+		System.out.println(book1.to String);
+		
+		
+	}
+
+}
