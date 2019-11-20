@@ -10,7 +10,7 @@ public class Practice {
 			myArrays[i] = i * 2;
 
 		}
-		myArrays[0] = 5;
+	//	myArrays[0] = 5;
 
 		// Task 0 - move "Hello world" output into method sayHi() and call it
 		// twice
@@ -81,8 +81,8 @@ public class Practice {
 		// 0 element is 3
 		// 1 element is 6
 		// 2 element is 73
-		int[] myIntegers = getArrayDefinedByUser(3);
-		printArray(myIntegers);
+//		int[] myIntegers = getArrayDefinedByUser(3);
+//		printArray(myIntegers);
 
 		// Task 6 - make sure getAvarege() and getAvaregeDouble() methods uses
 		// getSum() method
@@ -109,6 +109,10 @@ public class Practice {
 		// 1 element is 2
 		// 2 element is 1
 		// 3 element is 12
+		
+		int size = getArraySize();
+		int[] myIntegers = getArrayDefinedByUser(size);
+		printArray(myIntegers);
 
 		// Task 8.1 - rewrite your program, that Scanner object would be
 		// initialized only once in your program
@@ -123,8 +127,10 @@ public class Practice {
 	}
 
 	public static void printArray(int[] someArray) {
+		int n =0;
 		for (int elem : someArray) {
-			System.out.println(elem + " element is " + someArray[elem]);
+			System.out.println( n + " element is " + elem);
+			n++;
 
 		}
 	}
@@ -164,16 +170,25 @@ public class Practice {
 	}
 
 	public static int[] getArrayDefinedByUser(int numbers) {
+		
 		int[] myArray = new int[numbers];
 
 		System.out.println("Enter " + numbers + "thy:");
 		Scanner scanner = new Scanner(System.in);
 		for (int i = 0; i < numbers; i++) {
 			myArray[i] = scanner.nextInt();
-
 		}
 
 		return myArray;
+	
 	}
+	
+	public static int getArraySize(){
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter array size:");
+		int number = scanner.nextInt();
+		return number;
+	}
+	
 
 }
