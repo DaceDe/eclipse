@@ -10,7 +10,7 @@ public class Practice {
 			myArrays[i] = i * 2;
 
 		}
-		myArrays[0]=5;
+		myArrays[0] = 5;
 
 		// Task 0 - move "Hello world" output into method sayHi() and call it
 		// twice
@@ -81,7 +81,7 @@ public class Practice {
 		// 0 element is 3
 		// 1 element is 6
 		// 2 element is 73
-		int[] myIntegers = getArrayDefinedByUser(6);
+		int[] myIntegers = getArrayDefinedByUser(3);
 		printArray(myIntegers);
 
 		// Task 6 - make sure getAvarege() and getAvaregeDouble() methods uses
@@ -139,10 +139,7 @@ public class Practice {
 
 	public static int getAvarege(int[] someArray) {
 		int average = 0;
-		int sum = 0;
-		for (int i = 0; i < someArray.length; i++) {
-			sum = sum + someArray[i];
-		}
+		int sum = getSum(someArray);
 		average = sum / someArray.length;
 		return average;
 	}
@@ -159,25 +156,23 @@ public class Practice {
 
 	public static double getAvaregeDouble(int[] someArray) {
 		double average = 0;
-		double sum = 0;
-		for (int i = 0; i < someArray.length; i++) {
-			sum = sum + someArray[i];
-		}
+		double sum = getSum(someArray);
+		
 		average = sum / someArray.length;
 		return average;
 
 	}
 
 	public static int[] getArrayDefinedByUser(int numbers) {
-		int[] myArray=new int[numbers];
-		
+		int[] myArray = new int[numbers];
+
 		System.out.println("Enter " + numbers + "thy:");
 		Scanner scanner = new Scanner(System.in);
-		for( int i=0; i<numbers; i++){
-			myArray[i] =scanner.nextInt();
-			
+		for (int i = 0; i < numbers; i++) {
+			myArray[i] = scanner.nextInt();
+
 		}
-		
+
 		return myArray;
 	}
 
