@@ -30,6 +30,11 @@ public class Practice {
 		//	8 element is 16
 		//	9 element is 18
 		
+		for (int i = 0; i < myArrays.length; i++) {
+			System.out.println("" + i + " element is " + myArrays[i]);
+
+		}
+		
 		// Task 1.1 - printArray() should do the same logic as above code 
 		//  0 element is 0
 		//	1 element is 2
@@ -81,8 +86,8 @@ public class Practice {
 		//	0 element is 3
 		//	1 element is 6
 		//	2 element is 7
-		int[] myIntegers = getArrayDefinedByUser(3);
-		printArray(myIntegers);	
+		//int[] myIntegers = getArrayDefinedByUser(3);
+		//printArray(myIntegers);	
 		
 		
 		// Task 6 - make sure getAvarege() and getAvaregeDouble() methods uses getSum() method
@@ -121,7 +126,10 @@ public class Practice {
 		
 	}
 	public static void printArray(int[] someArray) {
-		// TODO should print out into console content of someArray
+		for (int i = 0; i < someArray.length; i++) {
+			System.out.println( i + " element is " + someArray[i]);
+
+		}
 	}
 
 	public static int getSum(int[] someArray) {
