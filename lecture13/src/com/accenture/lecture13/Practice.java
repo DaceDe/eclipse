@@ -1,5 +1,7 @@
 package com.accenture.lecture13;
 
+import java.util.Scanner;
+
 public class Practice {
 
 	public static void main(String[] args) {
@@ -8,6 +10,7 @@ public class Practice {
 			myArrays[i] = i * 2;
 
 		}
+		myArrays[0]=5;
 
 		// Task 0 - move "Hello world" output into method sayHi() and call it
 		// twice
@@ -44,8 +47,8 @@ public class Practice {
 		// Task 2 - getSum() should return sum of all elements of passed array
 		// You should get printed out into console: Sum is 90
 
-		 int sum = getSum(myArrays);
-		 System.out.println("Sum is " + sum);
+		int sum = getSum(myArrays);
+		System.out.println("Sum is " + sum);
 
 		// Task 3 - getAvarege() should return average of all elements of passed
 		// array
@@ -77,9 +80,9 @@ public class Practice {
 		// 7
 		// 0 element is 3
 		// 1 element is 6
-		// 2 element is 7
-		// int[] myIntegers = getArrayDefinedByUser(3);
-		// printArray(myIntegers);
+		// 2 element is 73
+		int[] myIntegers = getArrayDefinedByUser(6);
+		printArray(myIntegers);
 
 		// Task 6 - make sure getAvarege() and getAvaregeDouble() methods uses
 		// getSum() method
@@ -156,7 +159,7 @@ public class Practice {
 
 	public static double getAvaregeDouble(int[] someArray) {
 		double average = 0;
-		int sum = 0;
+		double sum = 0;
 		for (int i = 0; i < someArray.length; i++) {
 			sum = sum + someArray[i];
 		}
@@ -166,9 +169,16 @@ public class Practice {
 	}
 
 	public static int[] getArrayDefinedByUser(int numbers) {
+		int[] myArray=new int[numbers];
+		
 		System.out.println("Enter " + numbers + "thy:");
-		// TODO implement method, according to requirements of Task 8
-		return null;
+		Scanner scanner = new Scanner(System.in);
+		for( int i=0; i<numbers; i++){
+			myArray[i] =scanner.nextInt();
+			
+		}
+		
+		return myArray;
 	}
 
 }
