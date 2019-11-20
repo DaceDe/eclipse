@@ -18,7 +18,7 @@ public class app {
 	
 	public static void main(String[] args) {
 	
-		String name = "John";
+		String name = "John2";
 		int age = 29;
 		boolean man = false;
 		int size = 42;
