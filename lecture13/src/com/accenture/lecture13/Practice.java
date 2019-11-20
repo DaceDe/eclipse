@@ -53,6 +53,7 @@ public class Practice {
 		
 		// Task 2 - getSum() should return sum of all elements of passed array
 		// You should get printed out into console: Sum is 90
+		
 		int sum = getSum(myArrays);	
 		System.out.println("Sum is " + sum);
 
@@ -133,8 +134,11 @@ public class Practice {
 	}
 
 	public static int getSum(int[] someArray) {
-		// TODO implement method, that it will return sum of all elements of passed in array 'someArray' 
-		return 0;
+	int sum=0;
+		for (int i=0; i<someArray.length; i++){
+			sum=sum+someArray[i];
+	}
+		return sum;
 	}
 
 	public static int getAvarege(int[] someArray) {
