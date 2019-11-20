@@ -123,8 +123,8 @@ public class Practice {
 	}
 
 	public static void printArray(int[] someArray) {
-		for (int i = 0; i < someArray.length; i++) {
-			System.out.println(i + " element is " + someArray[i]);
+		for (int elem : someArray) {
+			System.out.println(elem + " element is " + someArray[elem]);
 
 		}
 	}
