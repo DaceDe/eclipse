@@ -4,12 +4,16 @@ import java.util.Scanner;
 
 public class Practice {
 
+	static Scanner scanner = new Scanner(System.in);
+		
 	public static void main(String[] args) {
 		int[] myArrays = new int[10];
 		for (int i = 0; i < myArrays.length; i++) {
 			myArrays[i] = i * 2;
 
 		}
+		
+		
 	//	myArrays[0] = 5;
 
 		// Task 0 - move "Hello world" output into method sayHi() and call it
@@ -174,7 +178,7 @@ public class Practice {
 		int[] myArray = new int[numbers];
 
 		System.out.println("Enter " + numbers + "thy:");
-		Scanner scanner = new Scanner(System.in);
+//		Scanner scanner = new Scanner(System.in);
 		for (int i = 0; i < numbers; i++) {
 			myArray[i] = scanner.nextInt();
 		}
@@ -184,7 +188,7 @@ public class Practice {
 	}
 	
 	public static int getArraySize(){
-		Scanner scanner = new Scanner(System.in);
+//		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter array size:");
 		int number = scanner.nextInt();
 		return number;
