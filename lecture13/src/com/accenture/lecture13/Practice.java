@@ -13,8 +13,11 @@ public class Practice {
 		// You should get printed out into console:
 		// Hello world
 		// Hello world
-		System.out.println("Hello world");
+		sayHi();
+		sayHi();
 		
+		
+	
 		//	Task 1 - print out into console content of myArray, as following 
 		//	0 element is 0
 		//	1 element is 2
@@ -33,6 +36,13 @@ public class Practice {
 		// ...
 		//	9 element is 18
 		printArray(myArrays);
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -104,8 +114,12 @@ public class Practice {
 		// * hint, think about making Scanner instance(object) as a class static field and refer to it in your code	
 			
 		
+		
 	}
-
+	public static void sayHi(){
+		System.out.println("Hello world");
+		
+	}
 	public static void printArray(int[] someArray) {
 		// TODO should print out into console content of someArray
 	}
