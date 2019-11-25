@@ -4,13 +4,13 @@ public class WarriorApp {
 
 
 	public static void main(String[] args) {
-		Warrior warrior1 = new Warrior("Peter", 50);
+		Warrior warrior1 = new Warrior("Peter", 160);
 		
 		warrior1.getHealth();
 		System.out.println(warrior1);
 		
 		
-		warrior1.restoreHealth(80);
+		warrior1.restoreHealth(-90);
 
 		System.out.println(warrior1.getHealth());		
 		warrior1.restoreHealth(80);

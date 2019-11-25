@@ -38,16 +38,23 @@ public class Warrior {
 	}
 
 	public void restoreHealth(int plusHealthAmount) {
-
-		if (isAlive()) {
-			if (health > 100) {
-				System.out.println("Warrior health is full!");
-			} else
-				health = health + plusHealthAmount;
+		if (plusHealthAmount < 0) {
+			System.out.println("Wrooong!!!");
 		} else {
-			System.out.println("Your warrior is dead!");
-		}
+			if (isAlive()) {
+				if (health > 100) {
+					System.out.println("Warrior health is full!");
+				} else {
+					if ((health + plusHealthAmount) <= 100)
+						;
+					System.out.println("Warriors health is " + health);
+				}
 
+			} else {
+				System.out.println("Your warrior is dead!");
+			}
+
+		}
 	}
 
 	public String toString() {
