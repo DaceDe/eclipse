@@ -4,7 +4,9 @@ public class WarriorApp {
 
 
 	public static void main(String[] args) {
-		Warrior warrior1 = new Warrior("Peter", 160);
+		Warrior warrior1 = new Warrior("Peter",20, 100);
+		Warrior warrior2 = new Warrior("Bob",50, 60);
+		
 		
 		warrior1.getHealth();
 		System.out.println(warrior1);
@@ -16,6 +18,8 @@ public class WarriorApp {
 		warrior1.restoreHealth(80);
 
 		System.out.println(warrior1.getHealth());
+		
+		warrior1.fight(warrior2);
 		
 		
 		
