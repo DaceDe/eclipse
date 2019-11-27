@@ -9,6 +9,7 @@ public class Warrior {
 	public Warrior(String name, int damagePower, int health) {
 		this.name = name;
 		this.health = health;
+		this.damagePower = damagePower;
 	}
 
 	public String getName() {
@@ -34,26 +35,34 @@ public class Warrior {
 		return isAlive;
 	}
 
-	public void recievedDamage(int damagePower) {
-		if (health > 0) {
-			health = health - damagePower;
-		} else {
+	public void recievedDamage(int DamagePower) {
+		if (isAlive()) {
+			health = health - DamagePower;
+			} else {
 			System.out.println("Your warrior is dead!");
 		}
 
 	}
 
-	public void fight(Warrior anotherWarrior) {
+	public void fightInt(Warrior anotherWarrior) {
 		this.recievedDamage(getDamagePower());
 		anotherWarrior.recievedDamage(getDamagePower());
 
-		// this.recievedDamage(getDamagePower());
-		// anotherWarrior.recievedDamage(getDamagePower());
+		this.recievedDamage(getDamagePower());
+		anotherWarrior.recievedDamage(getDamagePower());
 
-		System.out.println(this.isAlive());
+		System.out.println(this.getHealth()+this.getName());
 
-		System.out.println(anotherWarrior.isAlive());
+		System.out.println(anotherWarrior.getHealth()+anotherWarrior.getName());
 
+	}
+	
+	public void fight(Warrior anotherWarrior) {
+		while (this.isAlive() && anotherWarrior.isAlive()) {
+			this.fightInt(anotherWarrior);
+		}
+System.out.println(this.getName() + " " + this.getHealth());
+System.out.println(anotherWarrior.getName() + " " + anotherWarrior.getHealth());
 	}
 
 	public void restoreHealth(int plusHealthAmount) {
