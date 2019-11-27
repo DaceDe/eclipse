@@ -18,13 +18,13 @@ public class Warrior {
 	public int getHealth() {
 		return health;
 	}
-	
-	public int getDamagePower(){
+
+	public int getDamagePower() {
 		return damagePower;
-		
+
 	}
 
-	private boolean isAlive() {
+	public boolean isAlive() {
 		boolean isAlive;
 		if (health > 0) {
 			isAlive = true;
@@ -34,27 +34,27 @@ public class Warrior {
 		return isAlive;
 	}
 
-	public void recievedDamage(int damage) {
+	public void recievedDamage(int damagePower) {
 		if (health > 0) {
-			health = health - damage;
+			health = health - damagePower;
 		} else {
 			System.out.println("Your warrior is dead!");
 		}
 
 	}
-	public void fight(Warrior anotherWarrior){
-		int damage = anotherWarrior.getDamagePower();
-		this.recievedDamage(damage);
-		while (this.isAlive()){
-			recievedDamage(damage);
-		break;
-		}
-	System.out.println(this.name + " is dead");
-		
-		
-		
+
+	public void fight(Warrior anotherWarrior) {
+		this.recievedDamage(getDamagePower());
+		anotherWarrior.recievedDamage(getDamagePower());
+
+		// this.recievedDamage(getDamagePower());
+		// anotherWarrior.recievedDamage(getDamagePower());
+
+		System.out.println(this.isAlive());
+
+		System.out.println(anotherWarrior.isAlive());
+
 	}
-	
 
 	public void restoreHealth(int plusHealthAmount) {
 		if (plusHealthAmount < 0) {
@@ -77,7 +77,7 @@ public class Warrior {
 	}
 
 	public String toString() {
-		return "Warrior name is " + getName() + " and has health level "
+		return "Warrior name is " + getName() + " and he has health level "
 				+ getHealth();
 	}
 
